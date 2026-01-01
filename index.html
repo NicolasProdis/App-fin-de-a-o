@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cielo de Esperanza 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sky-top: #a5d8ff;
+            --sky-bottom: #ffffff;
+            --accent: #d4af37; /* Dorado elegante */
+        }
+        body {
+            background: linear-gradient(180deg, var(--sky-top) 0%, var(--sky-bottom) 100%);
+            color: #2c3e50;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            overflow: hidden;
+            height: 100vh;
+        }
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Soft Ethereal Glow */
+        .soft-glow {
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+        }
+        /* Animated Clouds Background */
+        .cloud {
+            position: absolute;
+            background: white;
+            border-radius: 100px;
+            filter: blur(40px);
+            opacity: 0.4;
+            pointer-events: none;
+            z-index: 1;
+        }
+        @keyframes drift {
+            from { transform: translateX(-10vw); }
+            to { transform: translateX(110vw); }
+        }
+        .cloud-drift {
+            animation: drift 60s linear infinite;
+        }
+        /* Floating Animation for Wishes */
+        @keyframes float-upward {
+            0% { transform: translateY(0) scale(0.9); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-120vh) scale(1.1); opacity: 0; }
+        }
+        .wish-float {
+            animation: float-upward 35s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        }
+        .glass-light {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>
